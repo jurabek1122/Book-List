@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Table, Button } from "react-bootstrap";
 import BookDataService from '../services/book.sevices';
+import { BsPencilSquare } from 'react-icons/bs';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 
 const BooksList = ({ getBookID }) => {
@@ -59,14 +61,14 @@ const BooksList = ({ getBookID }) => {
                                 className="edit"
                                 onClick={() => getBookID(doc.id)}
                             >
-                                Edit
+                                <BsPencilSquare />
                             </Button>
                             <Button
                                 variant="danger"
                                 className="delete"
                                 onClick={() => deleteHandler(doc.id)}
                             >
-                                Delete
+                                <RiDeleteBin5Line />
                             </Button>
                             </td>
                         </tr>
